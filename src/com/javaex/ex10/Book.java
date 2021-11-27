@@ -50,7 +50,7 @@ public class Book {
     		System.out.println("\""+title+"\""+"이(가) 대여되었습니다.");
     		--stateCode;
     }
-    public void print() {//책의 정보를 출력하는 메소드
+    public void print() {//책의 정보를 출력하는 메소드.
     		if(stateCode == 1) {//재고있음
     			System.out.println(bookNo+" 책 제목:"+title+", 작가:"+author+", 대여 유무: 재고있음");
     		} else {

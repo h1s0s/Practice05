@@ -40,7 +40,7 @@ public class BookShop {
     //(2)전달받은 배열을 모두 출력하는 메소드
     private static void displayBookInfo(Book[] books) {
     	//Book.print(books); 이부분을 static으로 올려 사용하지 않음
-    	//반복문으로 배열 하나하나를 print()함
+    	//반복문으로 배열 하나하나를 print()함.
     	for(int i=0; i<books.length; i++) {
     		books[i].print();
     	}
