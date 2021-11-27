@@ -46,20 +46,15 @@ public class Book {
 	}
 	
 	//메소드 일반
-    public void rent(int bookNo) {//대여기능을 수행하는 메소드
+    public void rent() {//대여기능을 수행하는 메소드
     		System.out.println("\""+title+"\""+"이(가) 대여되었습니다.");
     		--stateCode;
-   
-    	
     }
-    public static void print(Book[] books) {//책의 정보를 출력하는 메소드
-    	for(int i=0; i<books.length; i++) {//반복해줄 메소드
-    		if(books[i].getStateCode() == 1) {//재고있음
-    			System.out.println(books[i].getBookNo()+" 책 제목:"+books[i].getTitle()+", 작가:"+books[i].getAuthor()+", 대여 유무: 재고있음");
+    public void print() {//책의 정보를 출력하는 메소드
+    		if(stateCode == 1) {//재고있음
+    			System.out.println(bookNo+" 책 제목:"+title+", 작가:"+author+", 대여 유무: 재고있음");
     		} else {
-    			System.out.println(books[i].getBookNo()+" 책 제목:"+books[i].getTitle()+", 작가:"+books[i].getAuthor()+", 대여 유무: 대여중");
+    			System.out.println(bookNo+" 책 제목:"+title+", 작가:"+author+", 대여 유무: 대여중");
     	}
-    
-    	}   
     }
 }

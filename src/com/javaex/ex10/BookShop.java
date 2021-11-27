@@ -28,16 +28,8 @@ public class BookShop {
 
         // (1) 입력된 번호에 맞는 책을 찾아 대여 되었음(상태코드=0)을 체크 합니다.
         // 코드작성
-        for(int i=0; i<books.length; i++) {
-        	if(books[i].getBookNo() == num) {
-        		if(books[i].getStateCode() == 1) {//재고 있음
-        			books[i].rent(i);
-        		} else {
-        			System.out.println("재고가 없습니다.");
-        		}
-        	} else {//i가 아님
-        	}
-        }
+        //이부분을 반복문으로 넣지 않고 rent() 메소드를 실행하는 것으로 수정
+        books[num-1].rent();//수정
 
         System.out.println("*****도서 정보 출력하기******");
         displayBookInfo(books);
@@ -47,6 +39,10 @@ public class BookShop {
 
     //(2)전달받은 배열을 모두 출력하는 메소드
     private static void displayBookInfo(Book[] books) {
-    	Book.print(books);
+    	//Book.print(books); 이부분을 static으로 올려 사용하지 않음
+    	//반복문으로 배열 하나하나를 print()함
+    	for(int i=0; i<books.length; i++) {
+    		books[i].print();
+    	}
     }
 }
